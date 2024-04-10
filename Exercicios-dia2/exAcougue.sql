@@ -2,19 +2,19 @@ create database db_cidade_das_carnes;
 use db_cidade_das_carnes;
 
 create table tb_categorias(
-	id int auto_increment primary key,
+    id int auto_increment primary key,
     nome varchar(50) not null,
     descricao text
 );
 
 create table tb_produtos(
-	id int auto_increment primary key,
-	nome varchar(50) not null,
+    id int auto_increment primary key,
+    nome varchar(50) not null,
     descricao TEXT,
     preco decimal not null,
     estoque int not null,
     id_categoria int not null,
-	foreign key (id_categoria) references tb_categorias(id)
+    foreign key (id_categoria) references tb_categorias(id)
 );
 
 insert into tb_categorias(nome, descricao) 
