@@ -3,7 +3,7 @@ use db_rhEmpresa;
 
 -- TABELA
 create table tb_colaboradores(
-	id int auto_increment primary key,
+    id int auto_increment primary key,
     nome varchar(100) not null,
     idade int not null,
     cargo varchar(50) not null,
