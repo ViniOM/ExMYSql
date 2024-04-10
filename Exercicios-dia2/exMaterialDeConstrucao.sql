@@ -3,7 +3,7 @@ use db_construindo_vidas;
 
 -- CATEGORIAS
 create table tb_categorias(
-	id int auto_increment primary key,
+    id int auto_increment primary key,
     nome varchar(100) not null unique,
     descricao TEXT
 );
@@ -26,9 +26,9 @@ values ("Cozinha", "Armários, Pias, etc..");
 
 -- PRODUTOS
 create table tb_produtos(
-	id int auto_increment primary key,
+    id int auto_increment primary key,
     nome varchar(50) not null unique,
-	preco decimal(10,2) not null,
+    preco decimal(10,2) not null,
     estoque int not null,
     id_categoria int not null,
     foreign key(id_categoria) references tb_categorias(id)
