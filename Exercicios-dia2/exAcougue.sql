@@ -1,6 +1,7 @@
 create database db_cidade_das_carnes;
 use db_cidade_das_carnes;
 
+-- TABLEs
 create table tb_categorias(
     id int auto_increment primary key,
     nome varchar(50) not null,
@@ -17,6 +18,7 @@ create table tb_produtos(
     foreign key (id_categoria) references tb_categorias(id)
 );
 
+-- INSERTs
 insert into tb_categorias(nome, descricao) 
 values ('Bovina', "Carne de Vaca");
 
@@ -35,8 +37,6 @@ values ('Carne Vermelha', "Carnes Vermelhas");
 insert into tb_categorias(nome, descricao) 
 values ('Utilitarios', "Utilitarios para churrasco");
 
-select * from tb_categorias;
-
 insert into tb_produtos(nome, descricao, preco, estoque, id_categoria)
 values ("Garfo", "Garfo grande para espetar a carne na churrasqueira", 14.99, 100, 7);
 
@@ -48,6 +48,9 @@ values ("Picanha", "A mais amada", 59.99, 10, 1);
 
 insert into tb_produtos(nome, descricao, preco, estoque, id_categoria)
 values ("Churrasqueira", "Da brasa", 249.99, 5, 7);
+
+-- SELECTs
+select * from tb_categorias;
 
 select * from tb_produtos;
 
